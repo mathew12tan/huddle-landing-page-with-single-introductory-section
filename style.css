@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+:root {
+  --Violet: hsl(257, 40%, 49%);
+  --Soft-Magenta: hsl(300, 69%, 71%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--Violet);
+  background-image: url("./images/bg-mobile.svg");
+  background-repeat: no-repeat;
+  margin: 35px auto;
+  width: 80%;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+/* intro */
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.intro img:nth-child(1) {
+  width: 130px;
+}
+
+/* content */
+
+.content {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+
+.content h1 {
+  font-family: "Poppins", sans-serif;
+  color: white;
+  line-height: 1.6em;
+}
+
+.content p {
+  font-family: "Open Sans", sans-serif;
+  color: white;
+  opacity: 0.8;
+  line-height: 1.6em;
+  margin: 30px 0;
+}
+
+.content button {
+  color: var(--Violet);
+  height: 40px;
+  width: 200px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  box-shadow: 0 5px 5px hsl(258, 39%, 39%);
+}
+
+.content button:hover {
+  background-color: var(--Soft-Magenta);
+}
+
+/* social */
+
+.social {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social .fab {
+  font-size: 1.5em;
+  color: white;
+}
+
+.social i:hover {
+  color: var(--Soft-Magenta);
+}
+
+@media screen and (min-width: 375px) {
+  body {
+    background-image: url("./images/bg-desktop.svg");
+  }
+
+  main {
+    max-width: 550px;
+    margin: auto;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  body {
+    background-image: url("./images/bg-desktop.svg");
+    width: 90%;
+    margin: 50px auto;
+  }
+
+  main {
+    max-width: unset;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .intro {
+    gap: 90px;
+  }
+
+  .intro img:nth-child(1) {
+    width: 220px;
+  }
+
+  .intro img:nth-child(2) {
+    width: 700px;
+  }
+
+  .content {
+    margin-top: 190px;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .content h1 {
+    font-size: 2.4em;
+  }
+
+  .content p {
+    font-size: 1.1em;
+    margin: 15px 0 20px;
+  }
+
+  .content button {
+    font-size: 1.1em;
+    height: 55px;
+    border-radius: 27.5px;
+    box-shadow: 0 10px 10px hsl(258, 39%, 39%);
+  }
+
+  .social {
+    margin-top: -30px;
+    grid-column: 2/3;
+    justify-content: flex-end;
+  }
+  
+  .social .fab {
+    font-size: 2.5em;
+  }
+}
+
+/* attribution */
+
+.attribution {
+  margin-top: 35px;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: white;
+}
