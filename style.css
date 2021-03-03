@@ -17,25 +17,19 @@ body {
   background-color: var(--Violet);
   background-image: url("./images/bg-mobile.svg");
   background-repeat: no-repeat;
-  margin: 35px auto;
-  width: 80%;
 }
 
 main {
   display: flex;
   flex-direction: column;
-  gap: 60px;
+  row-gap: 55px;
+  margin: 35px auto;
+  width: 80%;
 }
 
-/* intro */
+/* header */
 
-.intro {
-  display: flex;
-  flex-direction: column;
-  gap: 60px;
-}
-
-.intro img:nth-child(1) {
+header img {
   width: 130px;
 }
 
@@ -44,22 +38,35 @@ main {
 .content {
   display: flex;
   flex-direction: column;
+  display: flex;
+  row-gap: 60px;
   text-align: center;
   align-items: center;
 }
 
-.content h1 {
-  font-family: "Poppins", sans-serif;
-  color: white;
-  line-height: 1.6em;
+.content img {
+  width: 100%;
 }
 
-.content p {
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.intro h1 {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5em;
+  color: white;
+  line-height: 1.5em;
+}
+
+.intro p {
   font-family: "Open Sans", sans-serif;
   color: white;
   opacity: 0.8;
   line-height: 1.6em;
-  margin: 30px 0;
+  margin: 15px 0 25px;
 }
 
 .content button {
@@ -94,58 +101,65 @@ main {
   color: var(--Soft-Magenta);
 }
 
-@media screen and (min-width: 375px) {
+@media screen and (min-width: 376px) {
   body {
     background-image: url("./images/bg-desktop.svg");
+    background-size: cover;
   }
 
   main {
     max-width: 550px;
-    margin: auto;
+    margin: 35px auto;
   }
 }
 
 @media screen and (min-width: 1440px) {
   body {
     background-image: url("./images/bg-desktop.svg");
-    width: 90%;
-    margin: 50px auto;
+    background-size: unset;
   }
 
   main {
+    width: 90%;
+    margin: 50px auto;
     max-width: unset;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    row-gap: unset;
   }
 
-  .intro {
-    gap: 90px;
-  }
-
-  .intro img:nth-child(1) {
-    width: 220px;
-  }
-
-  .intro img:nth-child(2) {
-    width: 700px;
+  header img {
+    width: 210px;
   }
 
   .content {
-    margin-top: 190px;
-    align-items: flex-start;
+    display: flex;
+    flex-direction: row;
+    column-gap: 50px;
+    margin: 85px 0 30px;
+  }
+
+  .content img {
+    width: unset;
+    flex-basis: 50%;
+  }
+
+  .intro {
     text-align: left;
+    align-items: flex-start;
+    align-self: flex-start;
+    margin-top: 45px;
+    flex-basis: 50%;
   }
 
-  .content h1 {
-    font-size: 2.4em;
+  .intro h1 {
+    font-size: 2.5em;
   }
 
-  .content p {
+  .intro p {
     font-size: 1.1em;
-    margin: 15px 0 20px;
+    margin: 20px 0 25px;
   }
 
-  .content button {
+  .intro button {
     font-size: 1.1em;
     height: 55px;
     border-radius: 27.5px;
@@ -153,11 +167,9 @@ main {
   }
 
   .social {
-    margin-top: -30px;
-    grid-column: 2/3;
     justify-content: flex-end;
   }
-  
+
   .social .fab {
     font-size: 2.5em;
   }
@@ -166,7 +178,7 @@ main {
 /* attribution */
 
 .attribution {
-  margin-top: 35px;
+  margin-top: 20px;
   font-size: 11px;
   text-align: center;
 }
